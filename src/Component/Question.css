@@ -1,0 +1,41 @@
+/* Question.css */
+.options-container {
+    text-align: left;
+  }
+  
+  
+
+  /* Question.css */
+.options-container {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5); /* 使用 RGBA 表示半透明的白色背景 */
+  padding: 10px; /* 增加填充以提高可讀性 */
+}
+
+/* Question.css */
+.options-container input[type="radio"] {
+  transform: scale(1.5); /* 調整 radio 按鈕的大小 */
+  margin-right: 5px; /* 增加右邊距，使 radio 按鈕與標籤之間有一定間距 */
+}
+
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap; /* 在 PC 端設置選項水平排列 */
+}
+
+.option-item {
+  margin-right: 20px; /* 選項之間的間距 */
+}
+
+/* 手機板上的樣式 */
+@media (max-width: 768px) {
+  .options-container {
+    flex-direction: column; /* 在手機板上設置選項垂直排列 */
+  }
+
+  .option-item {
+    margin-right: 0; /* 手機板上去除選項之間的間距 */
+    margin-bottom: 10px; /* 手機板上增加選項之間的垂直間距 */
+  }
+}
