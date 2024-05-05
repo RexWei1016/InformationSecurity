@@ -8,8 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // 引入 Bootstrap 樣式
 Modal.setAppElement('#root');
 
 function App() {
-  const imageUrl = 'https://today-obs.line-scdn.net/0hS_zX87bBDHBHISPr8QNzJ313Dx90TR9zIxddcwRPUkRiRhl1KEFHHmQpUkBuREsuKRREF2ImF0FsE0JyeEBH/w644';
-  
   const [answers, setAnswers] = useState({});
   const [modalIsOpen, setModalIsOpen] = useState(false); // 控制彈出視窗的開關
   const [totalQuestions, setTotalQuestions] = useState(20);
@@ -47,6 +45,7 @@ function App() {
   
 
   const handleAnswerChange = (questionId, answer) => {
+    console.log(questionId + "f:"+answer)
     setAnswers(prevAnswers => ({
       ...prevAnswers,
       [questionId]: answer
@@ -196,7 +195,7 @@ function App() {
       question: "關於系統需求的描述，該產品提到那些有關裝置安全的系統說明?",
       type: "checkbox",
       options: ['Windows', 'Mac', 'Linux', 'Android', 'IOS'],
-      imageSrc:process.env.PUBLIC_URL + '/images/img03.jpg'
+      imageSrc:process.env.PUBLIC_URL + '/images/img03.png'
     },
     {
       section: 3,
@@ -276,8 +275,9 @@ function App() {
     {
       section: 4,
       id: 18,
-      question: "您平常使用電腦的時間約為?",
-      type: "number"
+      question: "您平常每天使用電腦的時間約為?",
+      options: { min: 0, max: 24, step: 1 },
+      type: "range"
     },
     {
       section: 4,

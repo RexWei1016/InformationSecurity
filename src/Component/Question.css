@@ -14,10 +14,13 @@
 
 /* Question.css */
 .options-container input[type="radio"] {
-  transform: scale(1.5); /* 調整 radio 按鈕的大小 */
+  transform: scale(2); /* 調整 radio 按鈕的大小 */
   margin-right: 5px; /* 增加右邊距，使 radio 按鈕與標籤之間有一定間距 */
 }
-
+.options-container.checkbox-container input[type="checkbox"] {
+  transform: scale(2); /* 調整 checkbox 的大小 */
+  margin-right: 5px; /* 增加右邊距，使 checkbox 與標籤之間有一定間距 */
+}
 
 .options-container {
   display: flex;
@@ -39,3 +42,21 @@
     margin-bottom: 10px; /* 手機板上增加選項之間的垂直間距 */
   }
 }
+
+/*滑軌*/
+.options-container.range-container {
+  display: flex;
+  align-items: center;
+}
+
+.options-container.range-container input[type="range"] {
+  width: 100%; /* 讓滑軌填滿容器寬度 */
+  margin-right: 10px; /* 增加右邊距，使得滑軌與數值標籤之間有一定間距 */
+}
+
+.options-container.range-container span {
+  font-size: 25px; /* 設定數值標籤字體大小 */
+  width: 30px; /* 調整數值標籤容器寬度 */
+  text-align: center; /* 文字置中 */
+}
+/*滑軌*/

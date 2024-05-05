@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Question.css'; // 引入問題元件的 CSS 檔案
 
 function Question({ questionId, question, type, options, imageSrc, handleAnswerChange, handleCheckboxChange }) {
+  const defaultRangeValue = options && options.min ? options.min : 0;
+  const [rangeValue, setRangeValue] = useState(defaultRangeValue);
   const renderInput = () => {
     switch (type) {
       case 'radio':
@@ -11,12 +13,12 @@ function Question({ questionId, question, type, options, imageSrc, handleAnswerC
               <div key={index} className="option-item"> {/* 添加類以設置單選項目的樣式 */}
                 <input
                   type="radio"
-                  id={`option-${index}`}
-                  name={`question-${questionId}`}
+                  id={`option--${questionId}-${index}`}
+                  name={`option--${questionId}`}
                   value={option}
                   onChange={(event) => handleAnswerChange(questionId, event.target.value)}
                 />
-                <label htmlFor={`option-${index}`}>{option}</label>
+                <label htmlFor={`option--${questionId}-${index}`}>{option}</label>
               </div>
             ))}
           </div>
@@ -53,6 +55,25 @@ function Question({ questionId, question, type, options, imageSrc, handleAnswerC
             <h3>{options}</h3>
           </div>
         ) : null;
+        
+
+      case 'range':
+        return (
+          <div className="options-container range-container">
+            <input
+              type="range"
+              min={options.min}
+              max={options.max}
+              step={options.step}
+              value={rangeValue}
+              onChange={(event) => {
+                setRangeValue(event.target.value);
+                handleAnswerChange(questionId, event.target.value);
+              }}
+            />
+            <span>{rangeValue}</span>
+          </div>
+        );
       default:
         return null;
     }
