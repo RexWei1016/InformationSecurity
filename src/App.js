@@ -45,7 +45,7 @@ function App() {
   
 
   const handleAnswerChange = (questionId, answer) => {
-    console.log(questionId + "f:"+answer)
+    // console.log(questionId + "f:"+answer)
     setAnswers(prevAnswers => ({
       ...prevAnswers,
       [questionId]: answer
@@ -86,10 +86,10 @@ function App() {
     })
       .then(response => {
         if (response.ok) {
-          console.log('Answers submitted successfully');
+          // console.log('Answers submitted successfully');
           setSubmitted(true); // 提交成功後更新狀態
         } else {
-          console.error('Failed to submit answers');
+          // console.error('Failed to submit answers');
         }
       })
       .catch(error => {
@@ -200,7 +200,7 @@ function App() {
     {
       section: 3,
       id: 7,
-      question: "剛剛你的網站是不是跳出了中毒提示?別擔心，那是這個產品提供的試用功能。",
+      question: "剛剛你的網站是不是跳出了中毒提示?別擔心，那是這個產品提供的試用功能，你認為跳出來中毒的訊息提示是 溫暖的/嚴肅的/客觀的?",
       type: "radio",
       options: ['溫暖的', '嚴肅的', '客觀的'],
     },
