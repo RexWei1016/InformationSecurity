@@ -181,17 +181,17 @@ function App() {
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
+    // {
+    //   section: 2,
+    //   id: 5,
+    //   question: "請問 SafeCam for PC的功能在哪些系統當中可以使用?",
+    //   options: ['Windows', 'Mac OS ', '兩者都可以'],
+    //   type: "radio",
+    //   imageSrc:process.env.PUBLIC_URL + '/images/img02.jpg'
+    // },
     {
       section: 2,
       id: 5,
-      question: "請問 SafeCam for PC的功能在哪些系統當中可以使用?",
-      options: ['Windows', 'Mac OS ', '兩者都可以'],
-      type: "radio",
-      imageSrc:process.env.PUBLIC_URL + '/images/img02.jpg'
-    },
-    {
-      section: 2,
-      id: 6,
       question: "關於系統需求的描述，該產品提到那些有關裝置安全的系統說明?",
       type: "checkbox",
       options: ['Windows', 'Mac', 'Linux', 'Android', 'IOS'],
@@ -199,89 +199,89 @@ function App() {
     },
     {
       section: 3,
-      id: 7,
+      id: 6,
       question: "剛剛你的網站是不是跳出了中毒提示?別擔心，那是這個產品提供的試用功能，你認為跳出來中毒的訊息提示是 溫暖的/嚴肅的/客觀的?",
       type: "radio",
       options: ['溫暖的', '嚴肅的', '客觀的'],
     },
     {
       section: 3,
-      id: 8,
+      id: 7,
       question: "根據剛剛防毒軟體的測試，如果您有1000塊錢，你願意花多少錢來買?",
       type: "number"
     },
     {
       section: 3,
-      id: 9,
+      id: 8,
       question: "我相信這個防毒軟體是可信的",
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
     {
       section: 3,
-      id: 10,
+      id: 9,
       question: "我相信這個防毒軟體是有效的",
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
     {
       section: 3,
-      id: 11,
+      id: 10,
       question: "我相信這個防毒軟體可以降低資訊漏洞的風險",
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
     {
       section: 3,
-      id: 12,
+      id: 11,
       question: "我相信這個防毒軟體是有用的",
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
     {
       section: 3,
-      id: 13,
+      id: 12,
       question: "我相信這個防毒軟體不會洩漏我的資訊",
       type: "radio",
       options: ['非常同意', '同意', '普通', '不同意', '非常不同意']
     },
     {
       section: 4,
-      id: 14,
+      id: 13,
       question: "您出生為西元?",
       type: "number"
     },
     {
       section: 4,
-      id: 15,
+      id: 14,
       question: "您的性別為?",
       type: "radio",
       options: ['生理男', '生理女']
     },
     {
       section: 4,
-      id: 16,
+      id: 15,
       question: "您的教育背景為?",
       type: "radio",
       options: ['社會科學院', '文/法學院', '商管學院', '理工學院', '海學院', '藝術/音樂學院', '醫(護)學院', '其他']
     },
     {
       section: 4,
-      id: 17,
+      id: 16,
       question: "您的最高學歷為?",
       type: "radio",
       options: ['國中小', '高中', '大專院校', '碩博士']
     },
     {
       section: 4,
-      id: 18,
+      id: 17,
       question: "您平常每天使用電腦的時間約為?",
       options: { min: 0, max: 24, step: 1 },
       type: "range"
     },
     {
       section: 4,
-      id: 19,
+      id: 18,
       question: "您的工作產業為?",
       type: "checkbox",
       options: ['軍警', '公務人員', '教育', '商', '工', '農', '醫療', '服務業', '家管', '學生', '退休', '資訊業', '其他']
@@ -344,11 +344,11 @@ function App() {
           className="custom-modal"
         >
           <h2>注意</h2>
-          <img src={process.env.PUBLIC_URL + '/images/img04.png'} alt="modal" />
+          {/*<img src={process.env.PUBLIC_URL + '/images/img04.png'} alt="modal" />*/}
           {/* 根據隨機值顯示不同的訊息 */}
-          {randomValue === 1 && <p><span style={{color: 'red'}}>親愛的用戶</span>，我們注意到您可能不小心下載了有害軟體。
-          請不要擔心，我們已為您準備了一套簡單的步驟來安全清理您的設備。您的安全是我們最大的關心！</p>}
-          {randomValue === 2 && <p><span style={{color: 'red'}}>警告：</span>您必須立刻採取防毒行動，偵測到潛在惡意軟體感染。務必按照提供的指示打擊威脅。</p>}
+          {randomValue === 1 && <p><span style={{color: 'red'}}>親愛的用戶💗</span>，我們注意到您可能不小心下載了有害軟體。
+          請不要擔心，我們已為您準備了一套簡單的步驟來安全清理您的設備。<span style={{color: 'red'}}>您的安全是我們最大的關心</span></p>}
+          {randomValue === 2 && <p><span style={{color: 'red'}}>警告❗❗：</span>您必須立刻採取防毒行動，偵測到潛在惡意軟體感染。<span style={{color: 'red'}}>務必按照提供的指示打擊威脅。</span></p>}
           {randomValue === 3 && <p>系統檢測到潛在惡意軟體。請您遵循下列推薦步驟來解決問題並防止您的數據損失或系統受到損害。</p>}
           {/* 其他隨機值的訊息 */}
           <div className="modal-buttons">
