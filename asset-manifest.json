@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/InformationSecurity/static/css/main.75ef15bb.css",
-    "main.js": "/InformationSecurity/static/js/main.27569317.js",
+    "main.js": "/InformationSecurity/static/js/main.4c29edd9.js",
     "static/js/453.8b8b3c28.chunk.js": "/InformationSecurity/static/js/453.8b8b3c28.chunk.js",
     "index.html": "/InformationSecurity/index.html",
     "main.75ef15bb.css.map": "/InformationSecurity/static/css/main.75ef15bb.css.map",
-    "main.27569317.js.map": "/InformationSecurity/static/js/main.27569317.js.map",
+    "main.4c29edd9.js.map": "/InformationSecurity/static/js/main.4c29edd9.js.map",
     "453.8b8b3c28.chunk.js.map": "/InformationSecurity/static/js/453.8b8b3c28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75ef15bb.css",
-    "static/js/main.27569317.js"
+    "static/js/main.4c29edd9.js"
   ]
 }
